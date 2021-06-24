@@ -11,7 +11,7 @@
     <style>
         body:after {
             content: "";
-            background-image: url("{{ url("img/background.jpeg") }}");
+            background-image: url("{{ asset("img/background.jpeg") }}");
             background-repeat: no-repeat;
             background-size: cover;
             background-color: white;
