@@ -45,7 +45,7 @@ class User extends Model implements
         'password',
     ];
 
-    public function topics()
+    public function topics(): HasMany
     {
         return $this->hasMany(Topic::class);
     }

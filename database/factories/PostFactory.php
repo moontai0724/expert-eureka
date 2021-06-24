@@ -23,7 +23,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => $this->faker->text(20),
-            'content' => $this->faker->text
+            'content' => $this->faker->text,
         ];
     }
 }
