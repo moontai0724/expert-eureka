@@ -1,22 +1,24 @@
 @extends('layouts.app')
 @section('title', '主頁')
 @section('content')
-    <link rel="stylesheet" href="{{ asset("css/style.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/edit.css") }}">
+    <div class="box">
+        <div class="box1"><a href=''>編輯個人資料</a></div>
 
-    <div class="box"><a href='{{ route('auth.login') }}'>登入</a><span>/</span><a href=''>註冊</a></div>
-    <div class="box1">
-        <nav>
-            <h2>文章分類</h2>
-            <ul>
-                <li><a href=''>心情</a></li>
-                <li><a href=''>遊戲</a></li>
-                <li><a href=''>大學</a></li>
-                <li><a href=''>高中</a></li>
-                <li><a href=''>數學</a></li>
-                <li><a href=''>育兒</a></li>
-            </ul>
-        </nav>
     </div>
-    <div class="box2">
+
+    <div class="box">
+        <div class="window">
+            個人基本資料
+
+        </div>
+
+    </div>
+    <div class="box">
+        <div class="window">
+        發表過的文章
+
+        </div>
+
     </div>
 @endsection

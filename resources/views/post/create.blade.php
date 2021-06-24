@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'YOUSAY')
+@section('title', '新增文章')
 @section('content')
     <link rel="stylesheet" href="{{ asset("css/released.css") }}">
 
