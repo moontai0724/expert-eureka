@@ -4,9 +4,15 @@
     <link rel="stylesheet" href="{{ asset("css/login.css") }}">
     <div class="box">
         <div class="window">
-            @error('message')
-            <div class="error">{{ $errors->first('message') }}</div>
-            @enderror
+            @if ($errors->any())
+                <div class="error">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="{{ route('auth.login') }}" method="post">
                 @csrf
                 <div class="form-input">

@@ -26,12 +26,11 @@ class AuthController extends Controller
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
+        if (!Auth::attempt($credentials))
+            return back()->withErrors(['message' => '帳號不存在或密碼錯誤']);
 
-            return redirect()->intended('/');
-        }
+        $request->session()->regenerate();
 
-        return back()->withErrors(['message' => '帳號不存在或密碼錯誤']);
+        return redirect()->intended('/');
     }
 }
