@@ -19,22 +19,25 @@
     font-size: 120%;
 }
 
-.form-input {
-    display: table;
-    width: 100%;
-    margin: 10px 0 10px 0;
-    border-spacing: 10px;
+.success {
+    color: green;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
 }
 
-.form-input label {
-    display: table-cell;
+table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.form-input .form-input-label {
     text-align: right;
     font-size: 150%;
     font-weight: bold;
 }
 
 .form-input input {
-    display: table-cell;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #707070;
