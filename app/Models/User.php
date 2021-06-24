@@ -43,4 +43,9 @@ class User extends Model implements
     protected $hidden = [
         'password',
     ];
+
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }
