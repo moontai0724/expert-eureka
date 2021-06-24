@@ -2,7 +2,6 @@
 @section('title', '登入')
 @section('content')
     <link rel="stylesheet" href="{{ asset("css/login.css") }}">
-    <h1 class="title">{{ config('app.name', 'Laravel') }}</h1>
     <div class="box">
         <div class="window">
             @error('message')

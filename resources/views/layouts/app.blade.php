@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no"/>
     <meta name="X-CSRF-Token" content="{{ csrf_token() }}"/>
     <title>@yield('title') - {{ config('app.name', 'Laravel') }}</title>
+    <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <style>
-        * {
-            font-family: 'Microsoft JhengHei UI', 'Noto Sans', serif;
-        }
-
         body:after {
             content: "";
             background-image: url("{{ url("img/background.jpeg") }}");
@@ -30,6 +27,7 @@
 </head>
 
 <body>
+<h1 class="title">{{ config('app.name', 'Laravel') }}</h1>
 @yield('content')
 </body>
 
