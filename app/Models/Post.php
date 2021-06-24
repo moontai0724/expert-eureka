@@ -16,6 +16,11 @@ class Post extends Model
         'content',
     ];
 
+    public function topic(): BelongsTo
+    {
+        return $this->belongsTo(Topic::class);
+    }
+
     public function author(): BelongsTo
     {
         return $this->belongsTo(User::class);
