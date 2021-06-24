@@ -1,0 +1,59 @@
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.window {
+    display: inline-block;
+    min-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid gray;
+    clear: both;
+}
+.box1{
+    float: right;
+    background: rgba(0, 0, 0, 0.395);
+    width: 15%;
+    border-radius: 50px;
+    margin: 1%;
+    margin-top: 3%;
+    margin-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 2%;
+
+}
+.box1{
+    float: right;
+    background: rgba(0, 0, 0, 0.6);
+    width: 16%;
+    border-radius: 50px;
+    margin: 1%;
+    margin-top: 3%;
+    margin-right: 5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 3%;
+    padding-right: 2%;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    float: right;
+    background: rgba(0, 0, 0, 0.6);
+    width: 16%;
+    border-radius: 50px;
+    margin: 1%;
+    margin-top: 3%;
+    margin-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 2%;
+}
