@@ -29,6 +29,10 @@
     line-height: 200%;
 }
 
+.topic a {
+    color: inherit;
+}
+
 .main {
     flex: 5 0 0;
 }
