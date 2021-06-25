@@ -15,8 +15,9 @@
                     <button onclick="javascript:location.href='{{ route('auth.login') }}'">登入/註冊</button>
                 @endguest
                 @auth
-                    <button onclick="javascript:location.href='{{ route('create', ['topicId' => $topicId]) }}'">發表文章</button>
-                    <button>關注</button>
+                    <button onclick="javascript:location.href='{{ route('create', ['topicId' => $topicId]) }}'">發表文章
+                    </button>
+                    {{--  <button>關注</button> --}}
                 @endauth
             </div>
             <h1 class="posts-title">最新文章</h1>
