@@ -17,7 +17,7 @@
             </div>
             <br>
             <div class="window">
-                <h1 class="posts-title">已發表文章</h1>
+                <h1 class="posts-title">已發表文章 ({{ count($posts) }})</h1>
                 @foreach($posts as $post)
                     <x-post :id="$post->id" :user-id="$post->user_id" :title="$post->title" :content="$post->content"></x-post>
                     <hr>
