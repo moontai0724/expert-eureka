@@ -17,6 +17,7 @@
                     @endguest
                     @auth
                         <button onclick="javascript:location.href='{{ route('respond', ['post' => $post]) }}'">回應</button>
+                        <button onclick="javascript:location.href='{{ route('auth.logout') }}'">登出</button>
                     @endauth
                 </div>
                 <h1 class="posts-title">最新文章</h1>

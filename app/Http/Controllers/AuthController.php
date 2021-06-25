@@ -58,4 +58,21 @@ class AuthController extends Controller
 
         return redirect()->route('auth.login')->withInput($credentials)->with('message', '註冊成功！');
     }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function logout(Request $request): RedirectResponse
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
 }
