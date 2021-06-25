@@ -7,11 +7,18 @@ use Illuminate\View\Component;
 class Post extends Component
 {
     /**
-     * The post title.
+     * The post id.
      *
      * @var int
      */
     public $id;
+
+    /**
+     * The user id.
+     *
+     * @var int
+     */
+    public $userId;
 
     /**
      * The post title.
@@ -32,9 +39,10 @@ class Post extends Component
      *
      * @return void
      */
-    public function __construct($title, $content, $id = null)
+    public function __construct($title, $content, $userId, $id = null)
     {
         $this->id = $id;
+        $this->userId = $userId;
         $this->title = $title;
         $this->content = $content;
     }

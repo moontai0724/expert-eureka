@@ -23,7 +23,7 @@
             </div>
             <h1 class="posts-title">最新文章</h1>
             @foreach($posts as $post)
-                <x-post :id="$post->id" :title="$post->title" :content="$post->content"></x-post>
+                <x-post :id="$post->id" :user-id="$post->user_id" :title="$post->title" :content="$post->content"></x-post>
                 <hr>
             @endforeach
         </div>

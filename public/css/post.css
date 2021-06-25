@@ -50,10 +50,6 @@
     flex-wrap: nowrap;
 }
 
-.post.clickable {
-    cursor: pointer;
-}
-
 .post aside {
     flex: 1 1 2%;
     padding-right: 10px;

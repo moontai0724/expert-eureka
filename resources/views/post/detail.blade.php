@@ -20,14 +20,13 @@
                         <button onclick="javascript:location.href='{{ route('auth.logout') }}'">登出</button>
                     @endauth
                 </div>
-                <h1 class="posts-title">最新文章</h1>
-                <x-post :title="$post->title" :content="$post->content"></x-post>
+                <x-post :user-id="$post->user_id" :title="$post->title" :content="$post->content"></x-post>
             </div>
             <br>
             <div class="window">
                 <h1 class="posts-title">回應</h1>
                 @foreach($responses as $response)
-                    <x-post :title="$response->title" :content="$response->content"></x-post>
+                    <x-post :user-id="$responses->user_id" :title="$response->title" :content="$response->content"></x-post>
                     <hr>
                 @endforeach
             </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,4 @@ Route::prefix('auth')->name('auth.')->group(function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 });
 Route::get('/login', function () { return Redirect::route('auth.login'); })->name('login');
+Route::get('/user/{user}', [UserController::class, 'home'])->name('user');

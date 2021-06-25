@@ -53,3 +53,7 @@ button {
 .form-action button {
     margin: 10px;
 }
+
+.clickable {
+    cursor: pointer;
+}
