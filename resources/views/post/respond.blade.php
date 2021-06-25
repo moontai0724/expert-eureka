@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', '回應文章')
 @section('content')
-    <link rel="stylesheet" href="{{ asset("css/post.list.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/post.css") }}">
     <div class="container">
         <div class="main window">
             @if ($errors->any())

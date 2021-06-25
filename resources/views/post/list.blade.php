@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', '所有文章')
 @section('content')
-    <link rel="stylesheet" href="{{ asset("css/post.list.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/post.css") }}">
     <div class="container">
         <div class="topics">
             <h1>文章分類</h1>
