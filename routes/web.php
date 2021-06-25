@@ -23,6 +23,10 @@ Route::get('/create/{topicId?}', [PostController::class, 'create'])->name('creat
 
 Route::post('/create', [PostController::class, 'store']);
 
+Route::get('/post/{post}', [PostController::class, 'show'])->name('detail');
+Route::get('/respond/{post}', [PostController::class, 'respond'])->name('respond');
+Route::post('/respond/{post}', [PostController::class, 'saveResponse']);
+
 Route::prefix('auth')->name('auth.')->group(function () {
     Route::get('login', [AuthController::class, 'login'])->name('login');
     Route::post('login', [AuthController::class, 'authenticate']);

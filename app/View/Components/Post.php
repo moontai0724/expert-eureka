@@ -9,6 +9,13 @@ class Post extends Component
     /**
      * The post title.
      *
+     * @var int
+     */
+    public $id;
+
+    /**
+     * The post title.
+     *
      * @var string
      */
     public $title;
@@ -25,8 +32,9 @@ class Post extends Component
      *
      * @return void
      */
-    public function __construct($title, $content)
+    public function __construct($title, $content, $id = null)
     {
+        $this->id = $id;
         $this->title = $title;
         $this->content = $content;
     }

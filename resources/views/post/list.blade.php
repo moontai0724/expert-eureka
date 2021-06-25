@@ -9,7 +9,7 @@
                 <x-topic-item :id="$topic->id" :title="$topic->title"></x-topic-item>
             @endforeach
         </div>
-        <div class="main">
+        <div class="main window">
             <div class="actions">
                 @guest
                     <button onclick="javascript:location.href='{{ route('auth.login') }}'">登入/註冊</button>
@@ -21,7 +21,7 @@
             </div>
             <h1 class="posts-title">最新文章</h1>
             @foreach($posts as $post)
-                <x-post :title="$post->title" :content="$post->content"></x-post>
+                <x-post :id="$post->id" :title="$post->title" :content="$post->content"></x-post>
                 <hr>
             @endforeach
         </div>

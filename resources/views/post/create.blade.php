@@ -3,7 +3,7 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset("css/post.list.css") }}">
     <div class="container">
-        <div class="main">
+        <div class="main window">
             @if ($errors->any())
                 <div class="error">
                     <ul>

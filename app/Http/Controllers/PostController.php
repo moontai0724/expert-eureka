@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Response;
 use App\Models\Topic;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -53,7 +54,7 @@ class PostController extends Controller
         /** @var Array<Topic> $topics */
         $topics = Topic::all();
 
-        return view('post.create')->with(['topics' => $topics,'topicId' => $topicId]);
+        return view('post.create')->with(['topics' => $topics, 'topicId' => $topicId]);
     }
 
     /**
@@ -79,5 +80,46 @@ class PostController extends Controller
             return back()->withInput($data)->withErrors(['message' => '在儲存時發生未知錯誤']);
 
         return redirect()->intended('/')->with('message', '新增成功！');
+    }
+
+    /**
+     * Display the specified post and responses.
+     *
+     * @param Post $post
+     * @return View
+     */
+    public function show(Post $post): View
+    {
+        /** @var Array<Topic> $topics */
+        $topics = Topic::all();
+        $responses = Response::all();
+
+        return view('post.detail')->with(['topics' => $topics, 'post' => $post, 'responses' => $responses, 'topicId' => null]);
+    }
+
+    public function respond(Post $post): View
+    {
+        /** @var Array<Topic> $topics */
+        $topics = Topic::all();
+
+        return view('post.respond')->with(['topics' => $topics, 'post' => $post]);
+    }
+
+    public function saveResponse(Request $request): RedirectResponse
+    {
+        $data = $request->validate([
+            'post_id' => ['required', 'exists:posts,id'],
+            'content' => ['required'],
+        ]);
+
+        $response = new Response();
+        $response->content = $data['content'];
+        $response->user_id = $request->user()->id;
+        $response->post_id = $data['post_id'];
+        $saved = $response->save();
+        if (!$saved)
+            return back()->withInput($data)->withErrors(['message' => '在儲存時發生未知錯誤']);
+
+        return redirect()->route('detail', ['post' => $data['post_id']])->with('message', '新增成功！');
     }
 }

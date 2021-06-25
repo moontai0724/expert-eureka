@@ -1,4 +1,4 @@
-<article class="post">
+<article class="post @if($id != null) clickable" onclick="javascript:location.href='{{ route('detail', ['post' => $id]) }}'@endif">
     <aside>
         <img src="{{ asset("img/avatar.png") }}" alt="avatar">
     </aside>

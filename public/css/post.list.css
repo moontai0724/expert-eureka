@@ -31,6 +31,9 @@
 
 .main {
     flex: 5 0 0;
+}
+
+.window {
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid #707070;
     padding: 20px;
@@ -41,6 +44,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+}
+
+.post .clickable {
+    cursor: pointer;
 }
 
 .post aside {
