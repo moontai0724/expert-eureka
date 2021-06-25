@@ -9,13 +9,13 @@
                 <x-topic-item :id="$topic->id" :title="$topic->title"></x-topic-item>
             @endforeach
         </div>
-        <div class="posts">
+        <div class="main">
             <div class="actions">
                 @guest
                     <button onclick="javascript:location.href='{{ route('auth.login') }}'">登入/註冊</button>
                 @endguest
                 @auth
-                    <button>發表文章</button>
+                    <button onclick="javascript:location.href='{{ route('create', ['topicId' => $topicId]) }}'">發表文章</button>
                     <button>關注</button>
                 @endauth
             </div>

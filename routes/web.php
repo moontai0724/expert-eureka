@@ -15,11 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PostController::class, 'index'])->name('index');
+Route::get('/', [PostController::class, 'listAll'])->name('index');
+Route::get('/topics/{topicId}', [PostController::class, 'list'])->name('list');
+
+Route::get('/create', [PostController::class, 'create']);
+Route::get('/create/{topicId?}', [PostController::class, 'create'])->name('create');
+
+Route::post('/create', [PostController::class, 'store']);
 
 Route::prefix('auth')->name('auth.')->group(function () {
     Route::get('login', [AuthController::class, 'login'])->name('login');
-    Route::post('login', [AuthController::class, 'authenticate'])->name('login');
+    Route::post('login', [AuthController::class, 'authenticate']);
     Route::get('register', [AuthController::class, 'register'])->name('register');
-    Route::post('register', [AuthController::class, 'store'])->name('register');
+    Route::post('register', [AuthController::class, 'store']);
 });

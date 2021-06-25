@@ -1,3 +1,3 @@
 <div class="topic">
-    <a>{{ $title }}</a>
+    <a href="{{ route('list', ['topicId' => $id]) }}">{{ $title }}</a>
 </div>

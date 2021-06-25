@@ -18,7 +18,7 @@
             @endif
             <form action="{{ route('auth.login') }}" method="post">
                 @csrf
-                <table>
+                <table class="form-table">
                     <tr class="form-input">
                         <td class="form-input-label">
                             <label for="email">信箱</label>

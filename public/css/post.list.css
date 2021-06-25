@@ -29,7 +29,7 @@
     line-height: 200%;
 }
 
-.posts {
+.main {
     flex: 5 0 0;
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid #707070;
@@ -56,4 +56,10 @@
 
 .post main {
     flex: 9 0 2%;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-size: 120%;
 }

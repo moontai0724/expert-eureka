@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<h1 class="title">{{ config('app.name', 'Laravel') }}</h1>
+<h1 class="title"><a href="{{ route('index') }}">{{ config('app.name', 'Laravel') }}</a></h1>
 @yield('content')
 </body>
 

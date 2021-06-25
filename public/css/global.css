@@ -9,6 +9,11 @@
     margin: auto;
 }
 
+.title a {
+    text-decoration: none;
+    color: inherit;
+}
+
 button {
     font-size: 125%;
     background: rgba(0, 0, 0, 0.6);
@@ -17,4 +22,34 @@ button {
     padding: 6px 15px 5px 15px;
     border-radius: 30px;
     cursor: pointer;
+}
+
+.form-table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.form-input .form-input-label {
+    text-align: right;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.form-input select,
+.form-input textarea,
+.form-input input {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #707070;
+    font-size: 150%;
+    color: white;
+}
+
+.form-action {
+    display: inline-block;
+    float: right;
+}
+
+.form-action button {
+    margin: 10px;
 }

@@ -15,7 +15,7 @@
             @endif
             <form action="{{ route('auth.register') }}" method="post">
                 @csrf
-                <table>
+                <table class="form-table">
                     <tr class="form-input">
                         <td class="form-input-label">
                             <label for="name">姓名</label>
