@@ -46,7 +46,7 @@
     flex-wrap: nowrap;
 }
 
-.post .clickable {
+.post.clickable {
     cursor: pointer;
 }
 
