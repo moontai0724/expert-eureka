@@ -19,9 +19,6 @@ class DatabaseSeeder extends Seeder
     {
         /** @var Collection<User> $users */
         $users = User::factory(5)->create();
-        $users->each(function (User $user) {
-            $user->topics()->saveMany(Topic::factory(5)->make());
-        });
         Topic::factory(5)->make()->each(function (Topic $topic) use ($users) {
             $users->random(1)->each(function (User $user) use ($topic) {
                 $user->topics()->save($topic);
