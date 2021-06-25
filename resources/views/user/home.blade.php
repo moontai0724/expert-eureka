@@ -8,12 +8,10 @@
                 <div class="image">
                     <img src="{{ asset("img/avatar.png") }}" alt="avatar">
                 </div>
-                <table class="form-table">
-                    <tr class="form-input">
-                        <td class="form-input-label">姓名</td>
-                        <td>{{ $user->name }}</td>
-                    </tr>
-                </table>
+                <div class="property">
+                    <span class="key">姓名</span>
+                    <span class="value">{{ $user->name }}</span>
+                </div>
             </div>
             <br>
             <div class="window">
@@ -34,6 +32,20 @@
             width: 250px;
             border-radius: 50%;
             margin: auto;
+        }
+
+        .property {
+            margin: 10px;
+            text-align: center;
+            font-size: 150%;
+        }
+
+        .property .key {
+            font-weight: bold;
+        }
+
+        .property span {
+            margin: 10px;
         }
     </style>
 @endsection
