@@ -26,7 +26,7 @@
             <div class="window">
                 <h1 class="posts-title">回應</h1>
                 @foreach($responses as $response)
-                    <x-post :user-id="$responses->user_id" :title="$response->title" :content="$response->content"></x-post>
+                    <x-post :user-id="$response->user_id" :title="$response->title" :content="$response->content"></x-post>
                     <hr>
                 @endforeach
             </div>
