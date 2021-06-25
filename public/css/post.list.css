@@ -1,0 +1,59 @@
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container>* {
+    margin: 0 10px 0 10px;
+}
+
+.actions {
+    display: inline-block;
+    float: right;
+}
+
+.topics {
+    flex: 1 0 0;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #707070;
+    padding: 20px;
+    color: lightgray;
+    font-size: 120%;
+}
+
+.topic {
+    font-size: 120%;
+    line-height: 200%;
+}
+
+.posts {
+    flex: 5 0 0;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #707070;
+    padding: 20px;
+}
+
+.post {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.post aside {
+    flex: 1 1 2%;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.post aside img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.post main {
+    flex: 9 0 2%;
+}
